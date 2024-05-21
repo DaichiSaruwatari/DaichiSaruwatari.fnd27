@@ -1,0 +1,154 @@
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+.sidebar {
+  width: 200px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 100%;
+}
+
+.icon-home::before {
+  content: url(../icons/home.png);
+  transform: scale(0.5);
+  position: relative;
+}
+
+.icon-profile::before {
+  content: url(../icons/profile.png);
+  transform: scale(0.5);
+  position: relative;
+}
+
+.icon-production::before {
+  content: url(../icons/production.png);
+  transform: scale(0.5);
+  position: relative;
+}
+
+.icon-github::before {
+  content: url(../icons/github.png);
+}
+
+.icon-slack::before {
+  content: url(../icons/slack.png);
+}
+
+
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.open {
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  background: #86c0de;
+  transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.open::before,
+.open::after {
+  content: "";
+}
+.open span,
+.open::before,
+.open::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid white;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.open::before {
+  transform: translateY(-8px);
+}
+.open::after {
+  transform: translateY(8px);
+}
+
+.close {
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  transition: background-color .6s;
+}
+#drawer:checked + .open {
+  background: #dc6688;
+  transform: translateX(-280px);
+}
+#drawer:checked + .open span {
+  transform: scaleX(0);
+}
+#drawer:checked + .open::before {
+  transform: rotate(135deg) scaleX(1.2);
+}
+#drawer:checked + .open::after {
+  transform: rotate(-135deg) scaleX(1.2);
+}
+#drawer:checked ~ .close {
+  pointer-events: auto;
+  background-color: rgba(0,0,0,.3);
+}
+/* :::::: drawer menu :::::: */
+.menu {
+  z-index: 1;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(184, 212, 211, 0.8);
+  transform: translateX(100%);
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu h2 {
+  color: black;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-align: center;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  line-height: 1.4;
+}
+.menu li:not(:first-child) {
+  border-top: 1px solid rgb(255, 255, 255);
+}
+.menu a {
+  display: block;
+  padding: 1em 2em;
+  color: black;
+  text-decoration: inherit;
+  transition: background .6s;
+}
+.menu a:hover {
+  background: rgb(108, 211, 204);
+}
+#drawer:checked ~ .menu {
+  transform: none;
+}

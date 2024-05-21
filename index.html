@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html lang="jp">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <script type="text/javascript" src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもののサンプル">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- <script src="js/.js"></script> -->
 </head>
 
 <body>
-  <h1>DIG プログラミング基礎へようこそ！</h1>
-  <h2>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-    Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-    をクリックして、デベロッパーツールを開いてください。</h2>
-  <h2>下記にユニコーンの画像が表示されていれば成功です！</h2>
-  <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
-  <h3>30分悩んで進まなくなったら…helpチャンネルで質問してみましょう！</h3>
+	<input type="checkbox" id="drawer">
+	<label for="drawer" class="open"></label>
+	<label for="drawer" class="close"></label>
+	<nav class="menu">
+    <h2>menu</h2>
+    <ul>
+      <li><a href="#home" class="icon-home">Home</a></li>
+      <li><a href="#profile" class="icon-profile">Profile</a></li>
+      <li><a href="#production" class="icon-production">Production</a></li>
+    </ul>
+  </nav>
+
+	<div class="contents">
+		<header>
+			<h1 class="logo">Profile</h1>
+		</header>
+		<article>
+			⋮
+		</article>
+		<footer>
+			⋮
+		</footer>
+	</div>
 </body>
 
+  <div id="root">
+    <input type="checkbox" name="sidebar-open" id="sidebar-open">
+
+    <div id="sidebar">
+      <label for="sidebar-open"><></label>
+      <li><a href="./index.html" class="icon-home"></a></li>
+      <li><a href="#profile" class="icon-profile"></a></li>
+      <li><a href="#production" class="icon-production"></a></li>
+    </div>
+    <div id="contents">
+    </div>
+    <div class="sidebar">
+      <h1>サイドバー</h1>
+      <!-- <a tabindex="0" class="icon-home" role="button" href="/index.html"> -->
+      <a tabindex="0" class="icon-home" role="button" href="#">
+        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"></svg>
+        <div>
+          <span></span>
+        </div>
+        <span></span></a>
+        <li><a href="./index.html" class="icon-home" role="button">Home</a></li>
+        <li><a href="#profile" class="icon-profile" role="button">Profile</a></li>
+        <li><a href="#production" class="icon-production" role="button">Production</a></li>
+        <!-- <li><a href="#about">About</a></li> -->
+    </div>
+  </div>
+
+<div class="sidebar">
+  <form action="/search">
+      <input type="text" placeholder="検索..." name="search">
+      <button type="submit">検索</button>
+  </form>
+</div>
+
+<div class="sidebar">
+  <a href="https://slack.com/" class="icon-slack"></a>
+  <a href="https://github.com/" class="icon-github"></a>
+</div>
+
+</body>
 </html>
