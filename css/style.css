@@ -58,17 +58,53 @@ li span{
 .checkbox {
   transform: scale(2);
   margin: 0 12px 0 0;
+  cursor: pointer;
 }
 
 .completed {
   text-decoration: line-through;
 }
 
-.sidebar {
-  width: 200px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  height: 100%;
+.intro-hedder {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  transform: scale(1.2);
+}
+
+.del-btn {
+  border: white;
+  color: rgb(255, 255, 255);
+  background: rgb(238, 63, 63);
+  text-align: center;
+  font-size: 16px;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.del-btn:hover{
+  border: 1px solid rgb(238, 63, 63);
+  color: rgb(238, 63, 63);
+  background: white;
+  cursor: pointer;
+}
+
+.add-todolist {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    transform: scale(1.5);
+}
+
+.add-btn {
+  cursor: pointer;
 }
 
 .icon-home::before {
@@ -166,7 +202,7 @@ label {
 }
 #drawer:checked + .open {
   background: #dc6688;
-  transform: translateX(-280px);
+  transform: translateX(-250px);
 }
 #drawer:checked + .open span {
   transform: scaleX(0);

@@ -4,43 +4,12 @@
   <meta charset="UTF-8">
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもののサンプル">
+  <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="script.js"></script>
 </head>
 
 <body>
-	<input type="checkbox" id="drawer">
-	<label for="drawer" class="open"></label>
-	<label for="drawer" class="close"></label>
-	<nav class="menu">
-    <h2>menu</h2>
-    <ul>
-      <li><a href="#home" class="icon-home"> Home</a></li>
-      <li><a class="home" href="#home"><img src="/icons/home.png"><span> Home</span></a></li>
-      <a class="home" href="#home"><img src="/icons/home.png"><span> Home</span>
-      <div>
-        <img src="/icons/home.png" alt="home画像">
-      </div>
-      </a>
-      <li><a href="#introduction" class="icon-note"> Introduction</a></li>
-      <li><a href="#profile" class="icon-profile"> Profile</a></li>
-      <li><a href="#production" class="icon-production"> Production</a></li>
-    </ul>
-  </nav>
-
-
-  <div>
-    <h1 class="logo1">HTML実装したい事リスト</h1>
-    <ul class="checklist">
-      <label1><input type="checkbox" id="checkbox1" class="checkbox" onchange="toggleCheck(this)">おしゃれスライド</label1><br><br>
-      <label2><input type="checkbox" id="checkbox2" class="checkbox" onchange="toggleCheck(this)">ゲーム創りたい</label2><br><br>
-      <label3><input type="checkbox" id="checkbox3" class="checkbox" onchange="toggleCheck(this)">タイピングゲームのスコアをグラフ化したい</label3><br><br>
-      <label4><input type="checkbox" id="checkbox4" class="checkbox" onchange="toggleCheck(this)">ボタン押したら変化して欲しい</label4><br><br>
-    </ul>
-    <script src="/js/introduction.js"></script>
-  </div>
-
 	<div class="contents">
 		<header>
 			<h1 class="logo">Profile</h1>
@@ -54,33 +23,6 @@
 	</div>
 </body>
 
-  <div id="root">
-    <input type="checkbox" name="sidebar-open" id="sidebar-open">
-
-    <div id="sidebar">
-      <label for="sidebar-open"><></label>
-      <li><a href="./index.html" class="icon-home"></a></li>
-      <li><a href="#profile" class="icon-profile"></a></li>
-      <li><a href="#production" class="icon-production"></a></li>
-    </div>
-    <div id="contents">
-    </div>
-    <div class="sidebar">
-      <h1>サイドバー</h1>
-      <!-- <a tabindex="0" class="icon-home" role="button" href="/index.html"> -->
-      <a tabindex="0" class="icon-home" role="button" href="#">
-        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"></svg>
-        <div>
-          <span></span>
-        </div>
-        <span></span></a>
-        <li><a href="./index.html" class="icon-home" role="button">Home</a></li>
-        <li><a href="#profile" class="icon-profile" role="button">Profile</a></li>
-        <li><a href="#production" class="icon-production" role="button">Production</a></li>
-        <!-- <li><a href="#about">About</a></li> -->
-    </div>
-  </div>
-
 <div class="sidebar">
   <form action="/search">
       <input type="text" placeholder="検索..." name="search">
@@ -92,6 +34,19 @@
   <a href="https://slack.com/" class="icon-slack"></a>
   <a href="https://github.com/" class="icon-github"></a>
 </div>
+
+  <input type="checkbox" id="drawer">
+  <label for="drawer" class="open"></label>
+  <label for="drawer" class="close"></label>
+  <nav class="menu">
+    <h2>menu</h2>
+    <ul>
+      <li><a href="index.html" class="icon-home"> Home</a></li>
+      <li><a href="introduction.html" class="icon-note"> Introduction</a></li>
+      <li><a href="profile.html" class="icon-profile"> Profile</a></li>
+      <li><a href="production.html" class="icon-production"> Production</a></li>
+    </ul>
+  </nav>
 
 </body>
 </html>

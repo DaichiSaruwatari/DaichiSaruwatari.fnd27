@@ -24,3 +24,18 @@ function toggleCheck(checkbox) {
     listItem.classList.remove("completed");
   }
 }
+
+function addTodoList() {
+  const text = document.getElementById("add-todolist").value;
+  const boxLength = document.getElementsByClassName("checkbox").length;
+  const labelElement = document.getElementById("checklist");
+  const newLabel = document.createElement(`label${boxLength + 1}`);
+  console.log(newLabel)
+  newLabel.innerHTML = `<input type="checkbox" id="checkbox${boxLength + 1}" class="checkbox" onchange="toggleCheck(this)">${text}<button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br>`;
+  labelElement.appendChild(newLabel);
+}
+
+function deleteTodoList(click) {
+  const listItem = click.parentNode;
+  listItem.remove();
+}
