@@ -38,13 +38,13 @@ li span{
 
 
 .logo1 {
-  height: 100px;
-  line-height: 100px;
+  height: 150px;
+  line-height: 150px;
   margin-left: auto;
   margin-right: auto;
   padding: auto;
   text-align: center;
-  background-color: #a8cee0;
+  background-color: #f5ef9d;
 }
 
 .checklist {
@@ -99,8 +99,12 @@ li span{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 100%;
     transform: scale(1.5);
+}
+
+#add-todolist {
+  width: 30%;
 }
 
 .add-btn {
@@ -256,9 +260,13 @@ label {
   text-decoration: inherit;
   transition: background .6s;
 }
+
 .menu a:hover {
   background: rgb(108, 211, 204);
+  letter-spacing: .1rem;
+  transition: letter-spacing .6s;
 }
+
 #drawer:checked ~ .menu {
   transform: none;
 }
