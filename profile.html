@@ -5,25 +5,65 @@
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-  <div>
-    <!-- <h1 class="logo1">"サル"でも分かった学びを実践するサイト(FND27編)</h1> -->
-    <h1 class="logo1">実践(FND27編)</h1>
+<div id="container">
+  <header>
+    <h1 id="logo1"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>  
+
+  <nav id="menubar">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="production.html">Production</a></li>
+    </ul>
+  </nav>
+
+  <div id="contents">
+
+  <section id="about" class="wrapper">
+    <h2 class="section-title">About</h2>
+    <div class="content">
+      <img src="images/profile.jpg" alt="プロフィール画像">
+      <div class="text">
+        <h3 class="content-title">DAICHI SARUWATARI</h3>
+        <p>
+          出身：三重県鈴鹿市<br>
+          職業：かけだしプログラマー<br>
+          趣味：スノーボード, ゲーム<br>
+          好きなもの：ハンバーグ, 日本酒<br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sake" class="wrapper">
+    <h2 class="section-title">Sake</h2>
+    <ul>
+      <li>
+        <img src="images/sake1.jpg" alt="地酒">
+        <h4 class="content-title">豪華</h4>
+        <p>左から(蓬莱泉 空,獺祭,久保田,中埜)</p>
+      </li>
+      <li>
+        <img src="images/sake2.jpg" alt="No6">
+        <h4 class="content-title">希少</h4>
+        <p><a href="https://item.rakuten.co.jp/ko-enterprise/xtype1/?iasid=07rpp_10095___el-lwnu5ool-g0-fe566076-11eb-4235-8717-db89b7a37dee" target=”_blank”></a>左(S-type),中(X-type),右(R-type)</p>
+      </li>
+      <li>
+        <img src="images/sake3.jpg" alt="日本酒展">
+        <h4 class="content-title">日本酒展</h4>
+        <p>寫楽(しゃらく)</p>
+      </li>
+    </ul>
+  </section>
   </div>
-	<div class="contents">
-		<header>
-			<h1 class="logo">Profile</h1>
-		</header>
-		<article>
-			⋮
-		</article>
-		<footer>
-			⋮
-		</footer>
-	</div>
+</div>
 
 <!--ドロワーメニュー-->
 <input type="checkbox" id="drawer">

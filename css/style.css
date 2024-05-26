@@ -1,13 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 body {
+  margin: 0px;
+	padding: 0px;
+	-webkit-text-size-adjust: none;
+	color: #666;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 16px;
+	line-height: 2;
+	background: #eff2eb;
 	overflow-x: hidden;
-	margin: 0;
-	/* font-family: "Noto Sans JP", sans-serif; */
-	/* background: url(/icons/github.png); */
 }
 
-div {
-  display: block;
-  unicode-bidi: isolate;
+h2,h3 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 120%;
+  font-weight: normal;
+}
+
+#sake h4,#sake p{
+  margin: 0px;
+  padding: 0px;
+  font-size: 120%;
+  font-weight: normal;
+  text-align: center;
 }
 
 ul {
@@ -23,6 +40,64 @@ li span{
   text-align: center;
 }
 
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+	color: #666;
+	transition: 0.3s;
+}
+a:hover {
+	color: #546247;
+}
+
+#container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+header {
+	text-align: center;
+}
+
+#mainimg img {
+	border-radius: 10px;
+	margin-bottom: 40px;
+}
+
+#menubar {
+	text-align: center;
+	font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#menubar li {
+	display: inline;
+}
+#menubar li a {
+	text-decoration: none;
+	padding: 15px 30px;
+}
+
+#menubar li a:hover {
+	color: #546247;
+	border-bottom: 4px solid #546247;
+}
+
+#contents h2 {
+	clear: both;
+	margin-bottom: 20px;
+	color: #fff;
+	padding: 10px 20px;
+	background: #5f6d51;
+	border-radius: 10px;
+}
+
 .home img {
   vertical-align: middle;
   text-align: left;
@@ -36,22 +111,36 @@ li span{
   font-size: 24px;
 }
 
-
-.logo1 {
-  height: 150px;
-  line-height: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: auto;
-  text-align: center;
-  background-color: #f5ef9d;
+/*----profile----*/
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#about .text {
+  text-align: left;
 }
 
+#sake ul {
+  display: flex;
+  justify-content: space-between;
+}
+#sake li {
+  width: 25%;
+}
+
+
+/*----todo list----*/
 .checklist {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
   font-size: 18px;
 }
 
@@ -63,14 +152,6 @@ li span{
 
 .completed {
   text-decoration: line-through;
-}
-
-.intro-hedder {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  transform: scale(1.2);
 }
 
 .del-btn {
@@ -104,13 +185,14 @@ li span{
 }
 
 #add-todolist {
-  width: 30%;
+  width: 50%;
 }
 
 .add-btn {
   cursor: pointer;
 }
 
+/*---- ドロワーメニュー ----*/
 .icon-home::before {
   content: url(../icons/home.png);
   transform: scale(0.5);
@@ -148,8 +230,6 @@ li span{
 .icon-slack::before {
   content: url(../icons/slack.png);
 }
-
-
 
 /* html {
   scroll-behavior: smooth;
@@ -233,7 +313,7 @@ label {
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
-  background: rgba(184, 212, 211, 0.8);
+  background: rgba(184, 212, 189, 0.8);
   transform: translateX(100%);
   transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -262,7 +342,7 @@ label {
 }
 
 .menu a:hover {
-  background: rgb(108, 211, 204);
+  background: rgb(108, 211, 139);
   letter-spacing: .1rem;
   transition: letter-spacing .6s;
 }

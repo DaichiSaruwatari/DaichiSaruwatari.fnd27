@@ -5,25 +5,25 @@
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-	<div>
-		<!-- <h1 class="logo1">"サル"でも分かった学びを実践するサイト(FND27編)</h1> -->
-		<h1 class="logo1">実践(FND27編)</h1>
-	</div>
-	<div class="contents">
-		<header>
-			<h1 class="logo">Profile</h1>
-		</header>
-		<article>
-			⋮
-		</article>
-		<footer>
-			⋮
-		</footer>
-	</div>
+<div id="container">
+  <header>
+    <h1 id="logo1"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>
+	
+  <nav id="menubar">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="production.html">Production</a></li>
+    </ul>
+  </nav>
+</div>
 
 <!--ドロワーメニュー-->
 <input type="checkbox" id="drawer">

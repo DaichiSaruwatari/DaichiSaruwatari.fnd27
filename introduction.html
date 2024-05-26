@@ -5,24 +5,37 @@
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-  <div>
-    <!-- <h1 class="logo1">"サル"でも分かったHTMLを実現していくサイト(FND27編)</h1> -->
-    <h1 class="logo1">実践(FND27編)</h1>
+<div id="container">
+  <header>
+    <h1 id="logo1"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>  
+
+  <nav id="menubar">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="production.html">Production</a></li>
+    </ul>
+  </nav>
+
+  <div id="contents">
     <h2 class="intro-hedder">実装リスト</h2>
     <ul id="checklist" class="checklist">
       <label1><input type="checkbox" id="checkbox1" class="checkbox" onchange="toggleCheck(this)">おしゃれスライド欲しい✨
       <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label1>
-      <label2><input type="checkbox" id="checkbox2" class="checkbox" onchange="toggleCheck(this)">タイピングゲームのスコアをグラフ化したい📈
+      <label2><input type="checkbox" id="checkbox2" class="checkbox" onchange="toggleCheck(this)">タイピングスコアの成長グラフを作る📈
       <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label2>
-      <label3><input type="checkbox" id="checkbox3" class="checkbox" onchange="toggleCheck(this)">ボタン押したら変化して!📍
+      <label3><input type="checkbox" id="checkbox3" class="checkbox" onchange="toggleCheck(this)">ボタン押して変化したらぽいよね📍
       <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label3>
-      <label4><input type="checkbox" id="checkbox4" class="checkbox" onchange="toggleCheck(this)">なんでもいいからAPI使いてー⛓
+      <label4><input type="checkbox" id="checkbox4" class="checkbox" onchange="toggleCheck(this)">API使ってみたい⛓
       <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label4>
-      <label5><input type="checkbox" id="checkbox5" class="checkbox" onchange="toggleCheck(this)">ゲームしたい!🎮
+      <label5><input type="checkbox" id="checkbox5" class="checkbox" onchange="toggleCheck(this)">シンプルにゲームしたい🎮
       <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label5>
     </ul>
 
@@ -30,10 +43,22 @@
       <input type="text" placeholder="やりたいことを追加..." id="add-todolist" value="">
       <button class="add-btn" onclick="addTodoList()">追加</button>
     </h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <script src="js/introduction.js"></script>
 
   </div>
+</div>
 
 <!--ドロワーメニュー-->
   <input type="checkbox" id="drawer">
