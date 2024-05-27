@@ -9,12 +9,10 @@
 </head>
 
 <body>
-
 <div id="container">
   <header>
-  <h1 id="logo"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
-  <img id="mainimg" src="images/mainimg.jpg" alt="home-image">
-</header>
+    <h1 id="logo"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>
 
   <nav id="menubar">
     <ul>
@@ -27,24 +25,32 @@
   </nav>
 
   <div id="contents">
-    <section id="new">
-    <h2>News</h2>
-    <dl>
-    <dt>20xx/xx/xx</dt>
-    <dd>本来はRSSみたいにニュースを取得して表示させたかったがわからなかった</dd>
-    <dt>20xx/xx/xx</dt>
-    <dd>記事2</dd>
-    <dt>20xx/xx/xx</dt>
-    <dd>記事3</dd>
-    </dl>
-    </section>
-    <br><br>
+    <h2>Todo List</h2>
+    <ul id="checklist" class="checklist">
+      <label1><input type="checkbox" id="checkbox1" class="checkbox" onchange="toggleCheck(this)">動きのあるスライドメニュー欲しい💨
+      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label1>
+      <label2><input type="checkbox" id="checkbox2" class="checkbox" onchange="toggleCheck(this)">タイピングスコアの成長グラフを作る📈
+      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label2>
+      <label3><input type="checkbox" id="checkbox3" class="checkbox" onchange="toggleCheck(this)">ボタン押して変化したらぽいよね📍
+      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label3>
+      <label4><input type="checkbox" id="checkbox4" class="checkbox" onchange="toggleCheck(this)">API使ってみたい⛓
+      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label4>
+      <label5><input type="checkbox" id="checkbox5" class="checkbox" onchange="toggleCheck(this)">シンプルにゲームしたい🎮
+      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label5>
+    </ul>
+
+    <h3 class="add-todolist">
+      <input type="text" placeholder="やりたいことを追加..." id="add-todolist" value="">
+      <button class="add-btn" onclick="addTodoList()">追加</button>
+    </h3>
+    <br>
+
+    <script src="js/production1.js"></script>
+
   </div>
 </div>
 
-
-
-
+<!--ドロワーメニュー-->
   <input type="checkbox" id="drawer">
   <label for="drawer" class="open"><span></span></label>
   <label for="drawer" class="close"></label>

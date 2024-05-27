@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>document</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -12,15 +10,16 @@
 <body>
 <div id="container">
   <header>
-    <h1 id="logo1"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
-  </header>  
+    <h1 id="logo"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>
 
   <nav id="menubar">
     <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="introduction.html">Introduction</a></li>
     <li><a href="profile.html">Profile</a></li>
-    <li><a href="production.html">Production</a></li>
+    <li><a href="production1.html">Production1</a></li>
+    <li><a href="production2.html">Production2</a></li>
     </ul>
   </nav>
 
@@ -29,9 +28,9 @@
   <section id="about" class="wrapper">
     <h2 class="section-title">About</h2>
     <div class="content">
-      <img src="images/profile.jpg" alt="プロフィール画像">
+      <img src="images/profile.jpg" alt="profile-image">
       <div class="text">
-        <h3 class="content-title">DAICHI SARUWATARI</h3>
+        <p class="content-title">Daichi Saruwatari</p>
         <p>
           出身：三重県鈴鹿市<br>
           職業：かけだしプログラマー<br>
@@ -43,41 +42,60 @@
   </section>
 
   <section id="sake" class="wrapper">
-    <h2 class="section-title">Sake</h2>
+    <h3 class="section-title">Favorite</h3>
     <ul>
       <li>
-        <img src="images/sake1.jpg" alt="地酒">
-        <h4 class="content-title">豪華</h4>
-        <p>左から(蓬莱泉 空,獺祭,久保田,中埜)</p>
+        <img src="images/sake1.jpg" alt="sake1-image">
+        <p class="content-title">贅沢に</p>
+        <p>左から(蓬莱泉 空、獺祭、久保田、中埜)</p>
       </li>
       <li>
-        <img src="images/sake2.jpg" alt="No6">
-        <h4 class="content-title">希少</h4>
-        <p><a href="https://item.rakuten.co.jp/ko-enterprise/xtype1/?iasid=07rpp_10095___el-lwnu5ool-g0-fe566076-11eb-4235-8717-db89b7a37dee" target=”_blank”></a>左(S-type),中(X-type),右(R-type)</p>
+        <img src="images/sake2.jpg" alt="sake2-image">
+        <p class="content-title">希少品</p>
+        <p><a href="https://item.rakuten.co.jp/ko-enterprise/xtype1/?iasid=07rpp_10095___el-lwnu5ool-g0-fe566076-11eb-4235-8717-db89b7a37dee" target=”_blank”></a>左から(№6-S、№6-X、№6-R)</p>
       </li>
       <li>
-        <img src="images/sake3.jpg" alt="日本酒展">
-        <h4 class="content-title">日本酒展</h4>
+        <img src="images/sake3.jpg" alt="sake3-image">
+        <p class="content-title">日本酒展2024にて</p>
         <p>寫楽(しゃらく)</p>
       </li>
     </ul>
   </section>
+  <br><br>
   </div>
 </div>
 
 <!--ドロワーメニュー-->
 <input type="checkbox" id="drawer">
-<label for="drawer" class="open"></label>
+<label for="drawer" class="open"><span></span></label>
 <label for="drawer" class="close"></label>
 <nav class="menu">
   <h2>menu</h2>
   <ul>
     <li><a href="index.html" class="icon-home"> Home</a></li>
-    <li><a href="introduction.html" class="icon-note"> Introduction</a></li>
+    <li><a href="introduction.html" class="icon-study"> Introduction</a></li>
     <li><a href="profile.html" class="icon-profile"> Profile</a></li>
-    <li><a href="production.html" class="icon-production"> Production</a></li>
+    <li><a href="production1.html" class="icon-list"> Production1</a></li></li>
+    <li><a href="production2.html" class="icon-game"> Production2</a></li>
   </ul>
+
+  <!-- <li class="sidebar">
+  <form action="/search">
+      <input type="text" placeholder="検索..." name="search">
+      <button type="submit">検索</button>
+  </form>
+  </li>
+
+  <div class="sidebar">
+    <a href="https://slack.com/" class="icon-slack"></a>
+    <a href="https://github.com/" class="icon-github"></a>
+  </div> -->
+
 </nav>
+
+<footer>
+  <hr>
+</footer>
 
 </body>
 </html>

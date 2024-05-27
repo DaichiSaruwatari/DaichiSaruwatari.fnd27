@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CSSでつくる画面の端からニュッと出る「ハンバーガーメニュー」とか「ドロワーメニュー」と呼ばれるもの">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -12,67 +11,72 @@
 <body>
 <div id="container">
   <header>
-    <h1 id="logo1"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
-  </header>  
+    <h1 id="logo"><a href="index.html">"サル"でもわかるHTML実装 -FND27編-</a></h1>
+  </header>
 
   <nav id="menubar">
     <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="introduction.html">Introduction</a></li>
     <li><a href="profile.html">Profile</a></li>
-    <li><a href="production.html">Production</a></li>
+    <li><a href="production1.html">Production1</a></li>
+    <li><a href="production2.html">Production2</a></li>
     </ul>
   </nav>
 
   <div id="contents">
-    <h2 class="intro-hedder">実装リスト</h2>
-    <ul id="checklist" class="checklist">
-      <label1><input type="checkbox" id="checkbox1" class="checkbox" onchange="toggleCheck(this)">おしゃれスライド欲しい✨
-      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label1>
-      <label2><input type="checkbox" id="checkbox2" class="checkbox" onchange="toggleCheck(this)">タイピングスコアの成長グラフを作る📈
-      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label2>
-      <label3><input type="checkbox" id="checkbox3" class="checkbox" onchange="toggleCheck(this)">ボタン押して変化したらぽいよね📍
-      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label3>
-      <label4><input type="checkbox" id="checkbox4" class="checkbox" onchange="toggleCheck(this)">API使ってみたい⛓
-      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label4>
-      <label5><input type="checkbox" id="checkbox5" class="checkbox" onchange="toggleCheck(this)">シンプルにゲームしたい🎮
-      <button class="del-btn" onclick="deleteTodoList(this)">×</button><br><br></label5>
+    <h2 class="intro-hedder">FND27について</h2>
+    <ul>
+    <li><span>心理的安全性が確保</span>された環境で取り組める(サムズアップ👍の安心感)</li>
+    <li>インストラクター、受講生同士でも懇切丁寧に教えてくれる🆒(答えに導くヒントで誘導)</li>
     </ul>
 
-    <h3 class="add-todolist">
-      <input type="text" placeholder="やりたいことを追加..." id="add-todolist" value="">
-      <button class="add-btn" onclick="addTodoList()">追加</button>
-    </h3>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <h3 class="intro-hedder">FND27の学び</h3>
+    <ul>
+    <li><span>JSDoc、TDDの重要性</span>を体系的に学ぶことができた(しっかり<span>言語化</span>📕)</li>
+    <li><span>ペアプロ</span>で自分にない<span>考え方を知ることや知識の整理</span>ができた(これも<span>言語化</span>📚)</li>
+    </ul>
 
-
-    <script src="js/introduction.js"></script>
-
+    <h4 class="intro-hedder">FND27を終えての課題</h4>
+    <ul>
+    <li>脳内CPUの処理限界💥 ⇒ テストの進め方（少しづつパス🆗）、ログで途中結果を確認✅</li>
+    <li>構文、メソッドがすぐに出てこない ⇒ 慣れる！ひたすら反復！🔁</li>
+    </ul>
+    <br><br>
   </div>
 </div>
 
 <!--ドロワーメニュー-->
   <input type="checkbox" id="drawer">
-  <label for="drawer" class="open"></label>
+  <label for="drawer" class="open"><span></span></label>
   <label for="drawer" class="close"></label>
   <nav class="menu">
     <h2>menu</h2>
     <ul>
       <li><a href="index.html" class="icon-home"> Home</a></li>
-      <li><a href="introduction.html" class="icon-note"> Introduction</a></li>
+      <li><a href="introduction.html" class="icon-study"> Introduction</a></li>
       <li><a href="profile.html" class="icon-profile"> Profile</a></li>
-      <li><a href="production.html" class="icon-production"> Production</a></li>
+      <li><a href="production1.html" class="icon-list"> Production1</a></li></li>
+    <li><a href="production2.html" class="icon-game"> Production2</a></li>
     </ul>
+
+  <!-- <li class="sidebar">
+    <form action="/search">
+        <input type="text" placeholder="検索..." name="search">
+        <button type="submit">検索</button>
+    </form>
+  </li>
+
+  <div class="sidebar">
+    <a href="https://slack.com/" class="icon-slack"></a>
+    <a href="https://github.com/" class="icon-github"></a>
+  </div> -->
+
   </nav>
+
+<footer>
+  <hr>
+</footer>
 
 </body>
 </html>
